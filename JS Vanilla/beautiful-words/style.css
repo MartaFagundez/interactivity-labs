@@ -1,0 +1,213 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Oooh+Baby&family=Playfair+Display:wght@600&family=Source+Sans+3:wght@300;400&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --base-color: #f2f3f4;
+  --accent-color: #d0417e;
+  --black-color: #010b13;
+  --white-color: #fefefb;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Source Sans 3", sans-serif;
+  --title-font: "Playfair Display", serif;
+  --accent-font: "Oooh Baby", cursive;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: var(--body-font);
+  background: var(--base-color);
+  color: var(--black-color);
+  width: 100vw;
+  min-height: 100vh;
+  padding: 6vh 5vw 3vh;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1200px;
+}
+
+.flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexColumnLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flexColumnRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.flexRowCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexRowStart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/*=============== BASIC HEADER & FOOTER ===============*/
+header {
+  margin-bottom: 10vh;
+}
+
+header h1 {
+  font-family: var(--title-font);
+  font-weight: 600;
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1em;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+footer p i {
+  color: var(--accent-color);
+}
+
+/*=============== PROJECT RELATED ===============*/
+.accent-text {
+  font-family: var(--accent-font);
+  color: var(--accent-color);
+}
+
+.invert-color {
+  filter: invert();
+}
+
+.text {
+  max-width: 600px;
+  margin-top: -7rem;
+  padding: 1rem;
+  z-index: 2;
+}
+.text.left {
+  text-align: left;
+}
+.text.right {
+  text-align: right;
+}
+
+.title {
+  font-family: var(--title-font);
+  font-weight: 600;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle-big {
+  font-size: 2.5rem;
+  margin-bottom: -0.5rem;
+}
+.subtitle-medium {
+  font-size: 2rem;
+  margin-bottom: -1rem;
+  z-index: 2;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12.5vw;
+}
+section:nth-of-type(odd) {
+  flex-direction: column-reverse;
+}
+section:nth-of-type(even) {
+  flex-direction: column;
+}
+
+section p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+section figure {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+
+section figure img {
+  width: 100%;
+}
+
+.overlay {
+  background: var(--base-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For large devices */
+@media screen and (min-width: 992px) {
+  header h1 {
+    font-size: 4rem;
+  }
+  section:nth-of-type(odd),
+  section:nth-of-type(even) {
+    flex-direction: row;
+  }
+
+  .text {
+    max-width: 50%;
+    margin: 2rem;
+  }
+
+  .invert-color {
+    filter: none;
+  }
+}
