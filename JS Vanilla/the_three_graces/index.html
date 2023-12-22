@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>The Three Graces</title>
+  </head>
+  <body class="flexColumnStart">
+    <header>
+      <div class="container flexRowCenter">
+        <ul>
+          <li class="active"><a href="#">Art</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Visit</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Search</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="flexRowCenter canvas-container" id="container-canvas-1">
+      <spline-viewer
+        class="canvas"
+        loading-anim-type="spinner-small-light"
+        url="https://prod.spline.design/eGSN-42xt6vp58mS/scene.splinecode"
+      ></spline-viewer>
+    </div>
+
+    <main class="container flexColumnStart">
+      <h1><span>The</span> <br />Three Graces</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo
+        quidem quae aperiam voluptate iusto commodi numquam beatae, quas ab vel?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+        obcaecati, omnis quam quaerat distinctio tempora quos aliquid
+        exercitationem aperiam harum aliquam animi est nam autem magni
+        voluptatibus, voluptas rerum eveniet similique? Veritatis est minus,
+        iure consequatur culpa voluptatum dolor voluptas quas aspernatur.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nisi
+        enim dolore corrupti autem voluptas!
+      </p>
+
+      <figure>
+        <img class="flower" src="./images/greek_flower1.png" alt="" />
+      </figure>
+    </main>
+
+    <div class="flexRowStart canvas-container" id="container-canvas-2">
+      <spline-viewer
+        class="canvas"
+        loading-anim-type="spinner-small-light"
+        url="https://prod.spline.design/hQ3MDIb5FvhQlnMY/scene.splinecode"
+      ></spline-viewer>
+    </div>
+
+    <footer>
+      <div class="container flexRowCenter">
+        <p>
+          Made with <i class="fa-solid fa-heart"></i> by
+          <a
+            href="https://www.linkedin.com/in/martafagundezrodriguez"
+            target="_blank"
+          >
+            Marta Fagúndez
+          </a>
+        </p>
+      </div>
+    </footer>
+    <!-- Spline Viewer -->
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.0.10/build/spline-viewer.js"
+    ></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>

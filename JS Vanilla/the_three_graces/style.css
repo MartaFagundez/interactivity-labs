@@ -1,0 +1,229 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Lato:wght@300;400;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --base-color: #e9e8df;
+  --accent-color: #34506a;
+  --black-color: rgb(4, 4, 6);
+  --white-color: hsl(240, 83%, 98%);
+
+  /*========== Font and typography ==========*/
+  --body-font: "Lato", sans-serif;
+  --title-font: "EB Garamond", serif;
+  --biggest-font-size: 2rem;
+  --small-font-size: 14px;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background: var(--black-color);
+  color: var(--white-color);
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1000px;
+  padding: 0 1rem;
+}
+
+.flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.flexColumnStart {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+
+.flexColumnBetween {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.flexRowCenter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.flexRowStart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/*=============== BASIC HEADER & FOOTER ===============*/
+header {
+  margin-top: 3rem;
+  margin-bottom: -4vh;
+  z-index: 2;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.85rem;
+  list-style: none;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+header ul li {
+  margin: 0 2.5vw;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+header ul li::before {
+  content: "";
+  width: 0%;
+  height: 0px;
+  background-color: var(--white-color);
+  margin-top: 1.75em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transition: all 0.3s ease-out;
+}
+
+header ul li.active::before,
+header ul li:hover::before {
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: var(--white-color);
+  margin-top: 1.75em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header ul li a:hover {
+  text-decoration: none;
+}
+
+main p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0.75rem 0;
+  line-height: 1.5em;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+footer {
+  margin: -3rem auto 2rem;
+  z-index: 10;
+}
+
+footer p {
+  font-size: var(--small-font-size);
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: var(--black-color);
+}
+
+/*=============== PROJECT RELATED ===============*/
+#container-canvas-1 {
+  height: 750px;
+}
+
+#container-canvas-2 {
+  width: 100%;
+  height: calc(100vh + 2000px);
+  position: relative;
+}
+
+#container-canvas-2 .canvas {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.canvas {
+  width: 100%;
+}
+
+main {
+  position: relative;
+  margin-bottom: 2vh;
+}
+
+h1 {
+  font-family: var(--title-font);
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 1vw;
+  margin: -10rem auto 0.5em;
+  width: 100%;
+}
+
+h1 span {
+  font-size: 2.5rem;
+  text-transform: none;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  margin: 5rem auto 7rem;
+}
+
+img.flower {
+  width: 100%;
+  opacity: 0.8;
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For large devices */
+@media screen and (min-width: 1281px) {
+}
